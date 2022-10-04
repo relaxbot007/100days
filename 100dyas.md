@@ -177,9 +177,58 @@ Service:
 | is_buyer_maker | bool           |                               |
 | is_best_match  | bool           |                               |
 
-### MySQL
-
 ### Protobuf
 
+### MySQL
+
 ### GoModel
+
+
+
+# GRPC
+
+
+
+# Websocket
+
+
+
+# Version Control
+
+```shell
+#!/usr/bin
+go mode init
+go mode tidy
+go run ./
+```
+
+
+
+# English
+
+cut off contact
+
+infurstructure
+
+Cell phone service
+
+Feel hopless 
+
+Live in the dark
+
+annext to the 
+
+culture of the abuse/abuse scandal
+
+information leading a arrest
+
+Fined 
+
+Leak
+
+a Win-Win situation
+
+look for ... with ...
+
+contend with mobility 
 
