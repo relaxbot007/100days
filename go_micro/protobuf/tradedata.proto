@@ -1,0 +1,25 @@
+syntax = "proto3";
+option go_package = "./service";
+
+message TradeData {
+  int32 id = 1;
+  string symbol = 2;
+  float price =3;
+  float qty = 4;
+  float total = 5;
+  int64 trade_stamp =6;
+  bool is_buyer_maker = 7;
+  bool is_best_match = 8;
+}
+
+message GetTradeDataRequest {
+  string name = 1;
+}
+
+message GetTradeDataReply {
+  string message = 1;
+}
+
+service TradeDataService {
+  rpc GetTradeData (GetTradeDataRequest) returns (GetTradeDataReply) {}
+}

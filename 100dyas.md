@@ -181,20 +181,20 @@ Service:
 
 ## Install
 
-### protoc
+### protoc and protoc-gen-go
 
 ```shell
 #!/usr/bin
 sudo install protobuf -y
 #Install package 'protobuf-compiler' to provide command 'protoc'? [N/y] y
 protoc
-
+go install github.com/golang/protobuf/proto@latest
+go install github.com/golang/protobuf/protoc-gen-go@latest
 ```
-
-
-
-### protoc-gen-go
-
+```
+protoc-gen-go: unable to determine Go import path for "tradedata.proto"
+option go_package = "./";
+```
 
 
 ### MySQL
@@ -204,8 +204,23 @@ protoc
 
 
 # GRPC
+```shell
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+```
 
+# Consule
+## Install
+```console
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+sudo yum -y install consul
+consul agent -dev &
+```
+http://localhost:8500
 
+```console
+go get -u -v github.com/hashicorp/consul
+```
 
 # Websocket
 
